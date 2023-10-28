@@ -2,14 +2,23 @@ package com.gabrielbrunhara;
 
 public class Mensagem {
     private String acao;
+    private String token;
     private String nome;
     private String email;
     private String senha;
     private String cpf;
-    private String tipo;
+    private boolean isAdm;
+
+    public Mensagem() {
+        // Construtor vazio necessário para desserialização
+    }
 
     public String getAcao() {
         return acao;
+    }
+
+    public String getToken() {
+        return token;
     }
 
     public String getNome() {
@@ -28,12 +37,16 @@ public class Mensagem {
         return cpf;
     }
 
-    public String getTipo() {
-        return tipo;
+    public boolean getIsAdm() {
+        return isAdm;
     }
 
     public void setAcao(String acao) {
         this.acao = acao;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     public void setNome(String nome) {
@@ -52,7 +65,7 @@ public class Mensagem {
         this.cpf = cpf;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setIsAdm(boolean isAdm) {
+        this.isAdm = isAdm;
     }
 }
